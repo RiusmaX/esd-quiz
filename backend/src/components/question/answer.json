@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_question_answers",
+  "info": {
+    "displayName": "answer",
+    "icon": "question"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "string"
+    },
+    "isRight": {
+      "type": "boolean"
+    }
+  }
+}

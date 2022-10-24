@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "results",
+  "info": {
+    "singularName": "result",
+    "pluralName": "results",
+    "displayName": "Result"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "player": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::player.player",
+      "inversedBy": "result"
+    },
+    "total": {
+      "type": "integer"
+    },
+    "answeredQuestions": {
+      "displayName": "answeredQuestion",
+      "type": "component",
+      "repeatable": true,
+      "component": "result.answered-question"
+    }
+  }
+}

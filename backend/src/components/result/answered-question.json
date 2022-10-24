@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_result_answered_questions",
+  "info": {
+    "displayName": "answeredQuestion",
+    "icon": "question-circle"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::question.question"
+    },
+    "isAnswerCorrect": {
+      "type": "boolean"
+    },
+    "points": {
+      "type": "integer"
+    },
+    "answer": {
+      "type": "string"
+    },
+    "correctAnswer": {
+      "type": "string"
+    }
+  }
+}

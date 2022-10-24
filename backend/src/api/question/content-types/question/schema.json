@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "singularName": "question",
+    "pluralName": "questions",
+    "displayName": "Question"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "text"
+    },
+    "answers": {
+      "displayName": "answer",
+      "type": "component",
+      "repeatable": true,
+      "component": "question.answer"
+    },
+    "quizzes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::quiz.quiz",
+      "inversedBy": "questions"
+    }
+  }
+}
