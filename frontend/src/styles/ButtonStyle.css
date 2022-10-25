@@ -11,7 +11,7 @@ button.btn {
   text-align: center;
   border: none;
   box-shadow: var(--box-shadow-button);
-}
+  }
 
 button.btn:hover {
   background: var(--white);
