@@ -1,0 +1,22 @@
+
+label {
+  display: block;
+  font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+  margin: .4rem 0;
+}
+input { 
+  padding-block: 10px;
+  padding-inline: 20px;
+}
+input { 
+font-size: 25px;
+line-height: 1em;
+}
+
+
+
+
