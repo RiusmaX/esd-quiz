@@ -1,10 +1,17 @@
 import './App.css'
-import Button from './components/Button'
+import Answer from './components/Answer'
+import NumberQuestion from './components/NumberQuestion'
+import TextQuestion from './components/TextQuestion'
 
 function App () {
   return (
     <div className='App'>
-      <Button text='Mon texte' />
+      <NumberQuestion number='Question 1' />
+      <TextQuestion question='Dans quelle ville l’ESP-ESD n’est pas présente ? ' />
+      <Answer answer='Toulouse' />
+      <Answer answer='Bordeaux' />
+      <Answer answer='Paris' />
+      <Answer answer='Caen' />
     </div>
   )
 }
