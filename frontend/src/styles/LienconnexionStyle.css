@@ -1,0 +1,15 @@
+div.blockyellow {
+  background-color: var(--secondary);
+  margin-inline : 65px;
+  padding-block: 5px;
+}
+
+a.urlsite {
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  letter-spacing: 0.05em;
+  color: var(--background);
+  text-decoration: none;
+}

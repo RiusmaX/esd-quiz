@@ -1,0 +1,13 @@
+div.joueurconnecte {
+  color: var(--white);
+  font-style: normal;
+font-weight: 600;
+font-size: 40px;
+line-height: 60px;
+text-align: center;
+margin-inline: 5px;
+}
+
+p.textedif {
+  margin-top: -50px;
+}
