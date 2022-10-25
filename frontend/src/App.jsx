@@ -1,17 +1,15 @@
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import Answer from './components/Answer'
-import NumberQuestion from './components/NumberQuestion'
-import TextQuestion from './components/TextQuestion'
+import Home from './pages/Home'
+import Quiz from './pages/Quiz'
 
 function App () {
   return (
     <div className='App'>
-      <NumberQuestion number='Question 1' />
-      <TextQuestion question='Dans quelle ville l’ESP-ESD n’est pas présente ? ' />
-      <Answer answer='Toulouse' />
-      <Answer answer='Bordeaux' />
-      <Answer answer='Paris' />
-      <Answer answer='Caen' />
+      <Routes>
+        <Route path='/' index element={<Home />} />
+        <Route path='/quiz' index element={<Quiz />} />
+      </Routes>
     </div>
   )
 }

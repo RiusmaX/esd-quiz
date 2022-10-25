@@ -1,0 +1,18 @@
+.home {
+  padding-inline: 30px;
+}
+
+.home h1 {
+  color: var(--white);
+  margin-block: 40px;
+}
+
+.home p {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  font-size: 24px;
+  text-align: center;
+  padding-block: 30px;
+  line-height: 1.5em;
+}

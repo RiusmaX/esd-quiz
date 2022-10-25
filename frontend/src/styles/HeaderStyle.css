@@ -1,12 +1,13 @@
 .leheader {
   display: flex;
   flex-direction: row;
-  padding: 10px;
   justify-content: space-between;
   align-items: center;
-  /*border-bottom: 2px solid white;*/
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-block: 40px;
+}
+
+.center {
+  justify-content: center;
 }
 
 .logo {
@@ -29,16 +30,12 @@
   .leheader {
     display: flex;
     flex-direction: row;
-    padding: 10px;
-    /*justify-content: space-between;*/
     align-items: center;
-    /*border-bottom: 2px solid white;*/
-    /*padding-left: 10px;
-    /*padding-right: 10px;*/
+    padding-block: 40px;
   }
   
   .logo {
-    width: 100px;
+    width: 60vw;
     height: auto;
   }
   
