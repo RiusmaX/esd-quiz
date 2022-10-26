@@ -1,7 +1,4 @@
 
-div.question{
-  padding-top: 100px;
-}
 div.numberq {
   color: var(--background);
   background: var(--secondary);
@@ -11,7 +8,4 @@ div.numberq {
   line-height: 29px;
   text-align: center;
   text-transform: uppercase;
-
-  margin-inline: 39vw;
-  margin-bottom: 10px;
 }
