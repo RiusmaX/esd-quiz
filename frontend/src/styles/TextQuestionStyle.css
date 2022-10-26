@@ -1,10 +1,9 @@
 div.questiontxt {
   color: var(--white);
-  
-  font-family: 'Barlow Condensed';
   font-style: normal;
   font-weight: 500;
-  font-size: 35px;
+  font-size: 30px;
   line-height: 42px;
   justify-content: center;
+  padding-inline: 10px;
 }

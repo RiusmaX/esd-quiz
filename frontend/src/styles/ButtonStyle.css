@@ -11,7 +11,8 @@ button.btn {
   text-align: center;
   border: none;
   box-shadow: var(--box-shadow-button);
-  }
+  text-transform: uppercase;
+}
 
 button.btn:hover {
   background: var(--white);

@@ -8,7 +8,7 @@ import '../styles/TextInputStyle.css'
 function TextInput (props) {
   return (
     <div>
-      <input type={props.type} placeholder={props.placeholder} />
+      <input {...props} />
       {props.text}
     </div>
   )

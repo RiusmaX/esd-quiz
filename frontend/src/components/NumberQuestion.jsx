@@ -2,10 +2,8 @@ import '../styles/NumberQuestionStyle.css'
 
 function NumberQuestion (props) {
   return (
-    <div className='question'>
-      <div className='numberq'>
-        {props.number}
-      </div>
+    <div className='numberq'>
+      Question n°{props.number}
     </div>
   )
 }

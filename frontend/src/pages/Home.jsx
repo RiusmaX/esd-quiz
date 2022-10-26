@@ -1,19 +1,43 @@
-import Header from '../components/Header'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import TextInput from '../components/TextInput'
 import Button from '../components/Button'
 
 import '../styles/HomeStyle.css'
+import { createPlayer } from '../services/Api'
 
 function Home () {
+  const [name, setName] = useState('')
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    const player = JSON.parse(window.localStorage.getItem('PLAYER'))
+    if (player) {
+      navigate('/quiz')
+    }
+  }, [])
+
+  const handleClick = async () => {
+    const player = await createPlayer(name)
+    if (player && player.data) {
+      window.localStorage.setItem('PLAYER', JSON.stringify(player.data))
+      navigate('/quiz')
+    }
+  }
+
   return (
     <div className='home'>
-      <Header />
       <h1>
         Bienvenue sur le quiz
         de l’inauguration
         de l’ESP-ESD
       </h1>
-      <TextInput type='text' placeholder='Votre nom' />
+      <TextInput
+        type='text'
+        placeholder='Votre nom'
+        onChange={(e) => setName(e.target.value)}
+        value={name}
+      />
       <p>
         Vous allez participer à un quiz interactif.
         <span>
@@ -23,7 +47,7 @@ function Home () {
           Ouvrez bien vos oreilles...
         </span>
       </p>
-      <Button text="C'est parti" />
+      <Button onClick={handleClick} text="C'est parti" />
     </div>
   )
 }

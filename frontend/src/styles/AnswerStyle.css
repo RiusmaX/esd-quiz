@@ -4,7 +4,6 @@ div.answer {
   color: var(--background);
   background: var(--secondary);
 
-  font-family: 'Barlow Condensed';
   font-style: normal;
   font-weight: 600;
   font-size: 24px;

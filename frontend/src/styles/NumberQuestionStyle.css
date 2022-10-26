@@ -1,11 +1,12 @@
 
 div.numberq {
+  display: inline-block;
   color: var(--background);
   background: var(--secondary);
-  
-  font-family: 'Barlow Condensed';
   font-size: 20px;
   line-height: 29px;
   text-align: center;
   text-transform: uppercase;
+  padding-inline: 5px;
+  margin-block: 15px;
 }
