@@ -1,0 +1,94 @@
+/*Bloc résultat*/
+.Resultcontainer {
+  background-color: var(--secondary);
+  height: 100vh;
+}
+
+
+.blocResult {
+  color: var(--background);
+  background-color: white;
+  padding-block: 15px;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.blocDivScore {
+  display: flex;
+  justify-content: center;
+}
+
+/*Bloc score*/
+.score {
+  color: white;
+  /* width: 291px;
+  height: 78px; */
+  font-size: 40px;
+}
+
+.divScore {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 291px;
+  height: 78px;
+}
+
+
+.blocDivClassement {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/*Bloc score*/
+.Classement {
+  color: white;
+  /* width: 291px;
+  height: 78px; */
+  font-size: 40px;
+}
+
+.divClassement {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 291px;
+  height: 78px;
+}
+
+
+
+.blocDivFelicitation {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.divFelicitation {
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 317px;
+  height: 47px;
+}
+
+/*Bloc score*/
+.Felicitation {
+  color: white;
+  /* width: 291px;
+  height: 78px; */
+  font-size: 30px;
+}
+
+.divTextReponse {
+  display: flex;
+  justify-content: center;
+}
+
+.textReponse {
+  width: 337px;
+}
