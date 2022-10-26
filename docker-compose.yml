@@ -17,7 +17,7 @@ services:
     volumes:
       - ./backend:/usr/src/quiz/backend
     ports:
-      - '1337:1337'
+      - '1347:1337'
     depends_on:
       - db
     restart: unless-stopped

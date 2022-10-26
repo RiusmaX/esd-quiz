@@ -21,7 +21,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::question.question",
-      "inversedBy": "quizzes"
+      "mappedBy": "quizzes"
     },
     "currentQuestion": {
       "type": "integer"
