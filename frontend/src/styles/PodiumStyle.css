@@ -1,36 +1,39 @@
-div.row {
+div.podium{
   display:flex;
   justify-content: center;
   align-items: flex-end;
   color: var(--black);
   column-gap: 5px;
-  margin-inline: 50px;
   padding-block: 10px;
-  }
-  div.card{
-    width: 100vw;
-  }
-  div.card h4{
-  color: var(--white);
-  }
+  }  
 
-  div.col{
-    background:var(--secondary);
-    margin-top: 30px;
-  }
-  div.col1{
-    height: 35px;
-  }
-  div.col2{
-    height: 50px;
-
-  }
-  div.col3{
-    height: 25px;
-
-  }
-  div.row p {
-    margin: 0;
-    font-size: 1.3em;
+  div.card {
+    width: 150px;
   }
   
+  div.card h4{
+    color: var(--white);
+    }
+  
+    div.col{
+      margin-top: 30px;
+    }
+    div.col1{
+      background:var(--secondary);
+      height: 35px;
+    }
+    div.col2{
+      background:var(--secondary);
+      height: 50px;
+  
+    }
+    div.col3{
+      background:var(--secondary);
+      height: 25px;
+  
+    }
+    div.row p {
+      margin: 0;
+      font-size: 1.3em;
+    }
+    

@@ -1,0 +1,38 @@
+  div.row {
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  color: var(--white);
+  }
+  div.centerside {
+    width: 2px;
+    height:60vh;
+    background: var(--primary);
+  }
+  div.question-project{
+    width: 60vh;
+    text-align: center;
+  }
+  div.border{
+    border-bottom: 1px solid var(--primary);
+    align-items: flex-start;
+    width: 25%;
+    margin-inline: auto;
+  }
+  div.col{
+    display: flex;
+    flex-direction: column;
+  }
+  h4.classement{
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+  div.leftside {
+   padding-left: 100px;
+  }
+  div.rightside {
+    padding-right: 100px;
+   }
+    div.row p {
+      font-size: 1.3em;
+    }

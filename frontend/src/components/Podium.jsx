@@ -4,8 +4,7 @@ function Podium (props) {
   return (
     <div className='container'>
       <div className='classement'>
-        <div className='row'>
-
+        <div className='podium'>
           <div className='card'>
             <h4>Patrick Fiori</h4>
             <div className='col col1'>
