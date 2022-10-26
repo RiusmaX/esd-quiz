@@ -25,6 +25,12 @@
       "type": "component",
       "repeatable": true,
       "component": "result.answered-question"
+    },
+    "quiz": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::quiz.quiz",
+      "inversedBy": "results"
     }
   }
 }

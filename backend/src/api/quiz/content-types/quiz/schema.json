@@ -4,7 +4,8 @@
   "info": {
     "singularName": "quiz",
     "pluralName": "quizzes",
-    "displayName": "Quiz"
+    "displayName": "Quiz",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -25,6 +26,15 @@
     },
     "currentQuestion": {
       "type": "integer"
+    },
+    "results": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::result.result",
+      "mappedBy": "quiz"
+    },
+    "title": {
+      "type": "string"
     }
   }
 }
