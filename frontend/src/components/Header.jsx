@@ -7,11 +7,9 @@ function Header (props) {
         <div className='divlogo'>
           <img className='logo' src='/CROSS_Logo_esdESP_White.png' alt='image' />
         </div>
-        {
-          props.name
-            ? <h2 className='textebienvenue'>Bienvenue 'name'</h2>
-            : null
-        }
+        <div className='divlogo'>
+          <img className='nextGen' src='/Nantes_BNG_white.png' alt='image' />
+        </div>
       </div>
 
       <div className='traitheader' />

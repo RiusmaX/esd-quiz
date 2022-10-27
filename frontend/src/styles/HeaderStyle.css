@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-block: 40px;
+  padding-block: 20px;
 }
 
 .center {
@@ -11,8 +11,13 @@
 }
 
 .logo {
-  width: 304px;
+  width: 250px;
   height: auto;
+}
+
+.nextGen {
+  width: 104px;
+  margin-left: 20px;
 }
 
 .textebienvenue {
