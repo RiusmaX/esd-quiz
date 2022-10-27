@@ -28,7 +28,7 @@ const getPlayers = async () => {
 
 const getWords = async () => {
   try {
-    const result = await api.get('/words')
+    const result = await api.get('/words?pagination[limit]=100')
     return result.data
   } catch (error) {
     console.error(error)
