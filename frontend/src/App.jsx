@@ -17,8 +17,8 @@ function App () {
         <Route path='/quiz' element={<Quiz />} />
         <Route path='/projection' element={<Projection />} />
         <Route path='/result' element={<Result />} />
-        <Route path='/nuagedemots' element={<Nuagedemots />} />
         <Route path='/insertmot' element={<Insertmot />} />
+        <Route path='/nuagedemots' element={<Nuagedemots />} />
       </Routes>
     </div>
   )

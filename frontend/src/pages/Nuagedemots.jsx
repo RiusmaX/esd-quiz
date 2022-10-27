@@ -1,82 +1,23 @@
+import { useState, useEffect } from 'react'
 import ReactWordcloud from 'react-wordcloud'
 import Header from '../components/Header'
+import { getWords } from '../services/Api'
 
 import '../styles/NuagedemotsStyle.css'
 
-const words = [
+const _words = [
   {
     text: 'told',
     value: 20
   },
   {
     text: 'mistake',
-    value: 20
+    value: 40
   },
   {
-    text: 'thought',
-    value: 20
-  },
-  {
-    text: 'bad',
-    value: 20
-  },
-  {
-    text: 'bad',
-    value: 20
-  },
-  {
-    text: 'bad',
-    value: 20
-  },
-  {
-    text: 'bad',
-    value: 20
-  },
-  {
-    text: 'bad',
-    value: 20
-  },
-  {
-    text: 'bad',
-    value: 20
-  },
-  {
-    text: 'bad',
-    value: 20
-  },
-  {
-    text: 'bad',
-    value: 20
-  },
-  {
-    text: 'bad',
-    value: 20
-  },
-  {
-    text: 'bad',
-    value: 20
-  },
-  {
-    text: 'bad',
-    value: 20
-  },
-  {
-    text: 'bad',
-    value: 20
-  },
-  {
-    text: 'bad',
-    value: 20
-  },
-  {
-    text: 'bad',
-    value: 20
-  },
-  {
-    text: 'Antonin',
-    value: 20
+    text: 'mistake',
+    value: 60
   }
-
 ]
 
 const options = {
@@ -96,9 +37,24 @@ const options = {
 }
 
 function Nuagedemots () {
+  const [words, setWords] = useState([])
+  useEffect(() => {
+    const getData = async () => {
+      const data = await getWords()
+      if (data && data.data) {
+        const _words = data.data.map((w) => {
+          return {
+            text: w.attributes.word.toUpperCase(),
+            value: Math.floor(Math.random() * (60 - 30 + 1)) + 30
+          }
+        })
+        setWords(_words)
+      }
+    }
+    getData()
+  }, [])
   return (
     <div className='ndm'>
-      <Header />
       <div style={{ height: 500, width: 1000, marginTop: 50 }}>
         <ReactWordcloud words={words} options={options} />
       </div>

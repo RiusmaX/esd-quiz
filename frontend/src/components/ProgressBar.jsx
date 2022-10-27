@@ -4,7 +4,7 @@ function ProgressBar (props) {
   const steps = []
   for (let i = 1; i <= props.length; i++) {
     steps.push(
-      <div className={`step ${props.progress >= i && 'selected'}`} />
+      <div key={i} className={`step ${props.progress >= i && 'selected'}`} />
     )
   }
   return (

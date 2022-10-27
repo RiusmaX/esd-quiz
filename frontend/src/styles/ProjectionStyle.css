@@ -10,7 +10,7 @@
     background: var(--primary);
   }
   div.question-project{
-    width: 60vh;
+    /* width: 60vh; */
     text-align: center;
   }
   div.border{

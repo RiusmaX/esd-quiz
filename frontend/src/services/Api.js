@@ -26,15 +26,73 @@ const getPlayers = async () => {
   }
 }
 
+const getWords = async () => {
+  try {
+    const result = await api.get('/words')
+    return result.data
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+const createWord = async (word) => {
+  const player = await JSON.parse(window.localStorage.getItem('PLAYER'))
+  const data = {
+    data: {
+      word,
+      player: player.id
+    }
+  }
+  try {
+    const result = await api.post('/words', data)
+    return result.data
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 const createPlayer = async (name) => {
   const data = {
     data: {
       name
     }
   }
+
   try {
-    const result = await api.post('/players', data)
-    return result.data
+    const playerResult = await api.post('/players', data)
+    if (playerResult && playerResult.data) {
+      const resultData = {
+        data: {
+          player: playerResult.data.data.id,
+          total: 0
+        }
+      }
+      const result = await api.post('/results', resultData)
+      if (result) {
+        window.localStorage.setItem('RESULT', JSON.stringify(result.data.data))
+      }
+      return playerResult.data
+    }
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+const setResult = async (answeredQuestions, total) => {
+  const player = JSON.parse(window.localStorage.getItem('PLAYER'))
+  const playerResult = JSON.parse(window.localStorage.getItem('RESULT'))
+  const data = {
+    data: {
+      player: player.id,
+      answeredQuestions,
+      total
+    }
+  }
+  try {
+    const result = await api.put(`/results/${playerResult.id}?populate=*`, data)
+    if (result && result.data) {
+      window.localStorage.setItem('RESULT', JSON.stringify(result.data.data))
+    }
   } catch (error) {
     console.error(error)
   }
@@ -43,5 +101,8 @@ const createPlayer = async (name) => {
 export {
   createPlayer,
   getQuestions,
-  getPlayers
+  getPlayers,
+  getWords,
+  setResult,
+  createWord
 }

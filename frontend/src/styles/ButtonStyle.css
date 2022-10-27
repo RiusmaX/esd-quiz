@@ -15,8 +15,18 @@ button.btn {
   transition: 0.3s;
 }
 
+button.btn-disabled {
+  cursor: not-allowed ;
+  background: var(--light-gray);
+}
+
+
 button.btn:hover {
   background: var(--white);
   color: var(--primary);
 }
 
+button.btn-disabled:hover {
+  background: var(--light-gray);
+  color: var(--white);
+}

@@ -34,7 +34,7 @@ function Home () {
       </h1>
       <TextInput
         type='text'
-        placeholder='Votre nom'
+        placeholder='Votre prénom/nom'
         onChange={(e) => setName(e.target.value)}
         value={name}
       />
@@ -47,7 +47,7 @@ function Home () {
           Ouvrez bien vos oreilles...
         </span>
       </p>
-      <Button onClick={handleClick} text="C'est parti" />
+      <Button disabled={name.length < 3} onClick={handleClick} text="C'est parti" />
     </div>
   )
 }

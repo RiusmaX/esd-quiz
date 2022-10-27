@@ -1,17 +1,22 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 // import { useNavigate } from 'react-router-dom'
 import Button from '../components/Button'
 import TextInput from '../components/TextInput'
+import { createWord } from '../services/Api'
 
 import '../styles/InsertmotStyle.css'
 // import { createMot } from '../services/Api'
 
 function Insertmot (props) {
   const [mot, setMot] = useState('')
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
 
   const handleClick = async () => {
-    // const mot = await createMot(mot)
+    const result = await createWord(mot)
+    if (result && result.data) {
+      // navigate('/result')
+    }
   }
 
   return (

@@ -19,7 +19,7 @@ div.answer {
   box-shadow: var(--box-shadow-button)
 }
 
-div.answer:active {
+div.selected {
   color: var(--white);
   background: var(--primary)
 }

@@ -10,7 +10,7 @@ function Leftside (props) {
           size={256}
           style={{ height: 'auto', maxWidth: '100%', width: '100%' }}
           viewBox='0 0 256 256'
-          value='https://facebook.com'
+          value='https://esd-quiz.sergent.tech'
         />
       </div>
 
