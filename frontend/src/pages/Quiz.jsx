@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Answer from '../components/Answer'
 import Button from '../components/Button'
 import NumberQuestion from '../components/NumberQuestion'
+import ProgressBar from '../components/ProgressBar'
 import TextQuestion from '../components/TextQuestion'
 import { getQuestions } from '../services/Api'
 
@@ -34,25 +35,30 @@ function Quiz () {
   }
 
   return (
-    questions && questions[index] && questions[index].attributes
-      ? (
-        <div className='quizContainer'>
-          <NumberQuestion number={index + 1} />
-          <TextQuestion question={questions[index].attributes.content} />
-          {
-            questions[index].attributes.answers
-              ? (
-                  questions[index].attributes.answers.map(answer => {
-                    return <Answer key={answer.id} answer={answer.content} />
-                  })
-                )
-              : null
-          }
-          <Button onClick={handlePrevious} text='<' />
-          <Button onClick={handleNext} text='Valider' />
-        </div>
-        )
-      : <h2>Chargement...</h2>
+    <>
+      <ProgressBar length={questions.length} progress={index + 1} />
+      {
+        questions && questions[index] && questions[index].attributes
+          ? (
+            <div className='quizContainer'>
+              <NumberQuestion number={index + 1} />
+              <TextQuestion question={questions[index].attributes.content} />
+              {
+                questions[index].attributes.answers
+                  ? (
+                      questions[index].attributes.answers.map(answer => {
+                        return <Answer key={answer.id} answer={answer.content} />
+                      })
+                    )
+                  : null
+              }
+              <Button onClick={handlePrevious} text='<' />
+              <Button onClick={handleNext} text='Valider' />
+            </div>
+            )
+          : <h2>Chargement...</h2>
+        }
+    </>
   )
 }
 

@@ -1,0 +1,19 @@
+div.progress-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-block: 15px;
+}
+
+.step {
+  width: 15px;
+  height: 10px;
+  background-color: var(--white);
+  padding: 3px;
+  color: var(--light-gray);
+}
+
+.selected {
+  background-color: var(--primary);
+  color: var(--white)
+}

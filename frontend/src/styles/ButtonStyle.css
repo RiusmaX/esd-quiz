@@ -12,6 +12,7 @@ button.btn {
   border: none;
   box-shadow: var(--box-shadow-button);
   text-transform: uppercase;
+  transition: 0.3s;
 }
 
 button.btn:hover {
