@@ -1,0 +1,10 @@
+h2.soustitrenuage {
+  color: var(--primary);
+}
+h1.titrenuage {
+  color: var(--white);
+}
+
+div.buttonmot {
+  margin-block: 40px;
+}

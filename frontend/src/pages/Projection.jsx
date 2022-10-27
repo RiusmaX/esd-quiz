@@ -1,4 +1,5 @@
 import '../styles/ProjectionStyle.css'
+import { useEffect, useState } from 'react'
 import Leftside from '../components/Leftside'
 import Lienconnexion from '../components/Lienconnexion'
 import Nbrparticipant from '../components/Nbrparticipant'
@@ -10,16 +11,24 @@ import Button from '../components/Button'
 import ProgressBar from '../components/ProgressBar'
 import { useEffect, useState } from 'react'
 import { getQuestions } from '../services/Api'
+import { getPlayers } from '../services/Api'
 
 function Projection () {
   const [questions, setQuestions] = useState([])
+   const [players, setPlayers] = useState(0)
+
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
     const getData = async () => {
-      const data = await getQuestions()
-      if (data && data.data) {
-        setQuestions(data.data)
+      const _questions = await getQuestions()
+       const _players = await getPlayers()
+      if (_questions && _questions.data) {
+        setQuestions(_questions.data)
+       }
+    
+      if (_players && _players.data) {
+        setPlayers(_players.meta.pagination.total)
       }
     }
     getData()
@@ -39,12 +48,14 @@ function Projection () {
 
   return (
     <div className='container'>
-      <Header />
       <div className='row'>
-
         <div className='col leftside'>
           <div className='question-project'>
             <ProgressBar length={questions.length} progress={index + 1} />
+          <Leftside />
+          <Lienconnexion />
+          <Nbrparticipant players={players} />
+        </div>
 
             <NumberQuestion number={index + 1} />
             <TextQuestion question={questions[index].attributes.content} />
