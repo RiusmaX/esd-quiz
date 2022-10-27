@@ -6,6 +6,7 @@ import Quiz from './pages/Quiz'
 import Projection from './pages/Projection'
 import Result from './pages/Result'
 import Header from './components/Header'
+import Insertmot from './pages/Insertmot'
 
 function App () {
   return (
@@ -17,6 +18,7 @@ function App () {
         <Route path='/projection' element={<Projection />} />
         <Route path='/result' element={<Result />} />
         <Route path='/nuagedemots' element={<Nuagedemots />} />
+        <Route path='/insertmot' element={<Insertmot />} />
       </Routes>
     </div>
   )
