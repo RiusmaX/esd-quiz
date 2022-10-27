@@ -1,22 +1,33 @@
 import '../styles/ProjectionStyle.css'
+import { useEffect, useState } from 'react'
 import Leftside from '../components/Leftside'
 import Lienconnexion from '../components/Lienconnexion'
 import Nbrparticipant from '../components/Nbrparticipant'
 import NumberQuestion from '../components/NumberQuestion'
 import TextQuestion from '../components/TextQuestion'
 import Podium from '../components/Podium'
-import Header from '../components/Header'
+import { getPlayers } from '../services/Api'
 
 function Projection () {
+  const [players, setPlayers] = useState(0)
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await getPlayers()
+      if (data && data.data) {
+        setPlayers(data.meta.pagination.total)
+      }
+    }
+    getData()
+  }, [])
+
   return (
     <div className='container'>
-      <Header />
       <div className='row'>
-
         <div className='col leftside'>
           <Leftside />
           <Lienconnexion />
-          <Nbrparticipant />
+          <Nbrparticipant players={players} />
         </div>
 
         <div className='col centerside'> </div>

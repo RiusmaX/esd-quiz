@@ -17,6 +17,15 @@ const getQuestions = async () => {
   }
 }
 
+const getPlayers = async () => {
+  try {
+    const result = await api.get('/players')
+    return result.data
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 const createPlayer = async (name) => {
   const data = {
     data: {
@@ -33,5 +42,6 @@ const createPlayer = async (name) => {
 
 export {
   createPlayer,
-  getQuestions
+  getQuestions,
+  getPlayers
 }
