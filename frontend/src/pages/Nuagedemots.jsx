@@ -52,6 +52,9 @@ function Nuagedemots () {
       }
     }
     getData()
+    const interval = setInterval(() => {
+      getData()
+    }, 5000)
   }, [])
   return (
     <div className='ndm'>
