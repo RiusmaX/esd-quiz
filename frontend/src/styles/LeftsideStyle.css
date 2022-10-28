@@ -8,4 +8,9 @@ div.topleft {
 div.sizecode {
   width: 500px;
   height: auto;
+  margin: 20px
+}
+
+.white-background {
+  background-color: var(--white);
 }

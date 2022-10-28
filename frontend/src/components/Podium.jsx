@@ -1,9 +1,9 @@
-import Loader from './Loader'
+// import Loader from './Loader'
 import '../styles/PodiumStyle.css'
 
 function Podium (props) {
-  if (!props.classement || !props.classement[1]) {
-    return <Loader />
+  if (!props.classement || !props.classement[0] || !props.classement[1] || !props.classement[2]) {
+    return null
   }
   return (
     <div id='podium' className='container'>

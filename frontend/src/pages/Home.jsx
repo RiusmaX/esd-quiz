@@ -34,7 +34,7 @@ function Home () {
       </h1>
       <TextInput
         type='text'
-        placeholder='Votre prénom/nom'
+        placeholder='prénom/nom'
         onChange={(e) => setName(e.target.value)}
         value={name}
       />

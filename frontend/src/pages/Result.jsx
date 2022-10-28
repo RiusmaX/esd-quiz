@@ -1,12 +1,13 @@
+import { useEffect, useState } from 'react'
 import Confetti from 'react-confetti'
 import useWindowSize from 'react-use/lib/useWindowSize'
+import { useNavigate } from 'react-router-dom'
 
 import Podium from '../components/Podium'
 import TextInput from '../components/TextInput'
 import Button from '../components/Button'
 
 import '../styles/ResultStyle.css'
-import { useEffect, useState } from 'react'
 import { getResults, getClassement, updatePlayer } from '../services/Api'
 
 function Result () {
@@ -15,6 +16,8 @@ function Result () {
 
   const [classement, setClassement] = useState([])
   const { width } = useWindowSize()
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     const player = JSON.parse(window.localStorage.getItem('PLAYER'))
@@ -35,6 +38,11 @@ function Result () {
     const player = JSON.parse(window.localStorage.getItem('PLAYER'))
 
     await updatePlayer(player.id, email)
+  }
+
+  const handleClickReset = async () => {
+    window.localStorage.clear()
+    navigate('/')
   }
 
   return (
@@ -100,6 +108,8 @@ function Result () {
       />
       <div className='separatorEmpty' />
       <Button text='Valider' onClick={handleClickEmail} />
+      <div className='separatorEmpty' />
+      <Button text='Recommencer' onClick={handleClickReset} />
 
       {/* <div className='divTextNoteApplication'>
         <p className='textNoteApplication'>

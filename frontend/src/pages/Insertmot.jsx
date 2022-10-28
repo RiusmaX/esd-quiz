@@ -12,9 +12,7 @@ function Insertmot (props) {
 
   const handleClick = async () => {
     const result = await createWord(mot)
-    if (result && result.data) {
-      navigate('/resultat')
-    }
+    navigate('/resultat')
   }
 
   return (

@@ -38,6 +38,7 @@ function Projection () {
     _getQuestions()
     const interval = setInterval(() => {
       _getPlayers()
+      _getClassement()
     }, 1000)
 
     return function cleanup () {

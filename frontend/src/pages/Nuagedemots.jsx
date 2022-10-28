@@ -46,7 +46,7 @@ function Nuagedemots () {
   }, [])
   return (
     <div className='ndm'>
-      <div style={{ height: 500, width: 1000, marginTop: 50 }}>
+      <div style={{ height: 700, width: 1500, marginTop: 50 }}>
         <ReactWordcloud words={words} options={options} />
       </div>
     </div>
