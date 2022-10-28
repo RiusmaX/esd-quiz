@@ -17,20 +17,26 @@ function Projection () {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
-    const getData = async () => {
+    const _getQuestions = async () => {
       const _questions = await getQuestions()
-      const _players = await getPlayers()
-      console.log(_questions)
-      console.log(_players)
       if (_questions && _questions.data) {
         setQuestions(_questions.data)
       }
-
+    }
+    const _getPlayers = async () => {
+      const _players = await getPlayers()
       if (_players && _players.data) {
         setPlayers(_players.meta.pagination.total)
       }
     }
-    getData()
+    _getQuestions()
+    const interval = setInterval(() => {
+      _getPlayers()
+    }, 1000)
+
+    return function cleanup () {
+      clearInterval(interval)
+    }
   }, [])
 
   const handleNext = () => {
@@ -57,7 +63,7 @@ function Projection () {
         <div className='col leftside'>
           <div className='question-project'>
             <Leftside />
-            <Lienconnexion />
+            <Lienconnexion lien='https://esd-quiz.sergent.tech/' />
             <Nbrparticipant players={players} />
           </div>
 

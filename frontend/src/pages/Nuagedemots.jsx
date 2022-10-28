@@ -1,24 +1,8 @@
 import { useState, useEffect } from 'react'
 import ReactWordcloud from 'react-wordcloud'
-import Header from '../components/Header'
 import { getWords } from '../services/Api'
 
 import '../styles/NuagedemotsStyle.css'
-
-const _words = [
-  {
-    text: 'told',
-    value: 20
-  },
-  {
-    text: 'mistake',
-    value: 40
-  },
-  {
-    text: 'mistake',
-    value: 60
-  }
-]
 
 const options = {
   colors: ['#fff', '#00C4B3', '#FAE100'],

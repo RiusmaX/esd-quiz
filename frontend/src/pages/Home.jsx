@@ -15,7 +15,7 @@ function Home () {
     if (player) {
       navigate('/quiz')
     }
-  }, [])
+  }, [navigate])
 
   const handleClick = async () => {
     const player = await createPlayer(name)

@@ -1,13 +1,20 @@
-/* import Header from '../components/Header' */
+import Confetti from 'react-confetti'
+import useWindowSize from 'react-use/lib/useWindowSize'
+
 import '../styles/ResultStyle.css'
 import Podium from '../components/Podium'
 import TextInput from '../components/TextInput'
 import Button from '../components/Button'
 
 function Result () {
+  const { width, height } = useWindowSize()
+
   return (
     <div className='Resultcontainer'>
-      {/* <Header /> */}
+      <Confetti
+        width={width}
+        height={height}
+      />
       <p className='blocResult'>
         Resultats
       </p>
@@ -58,49 +65,13 @@ function Result () {
       <TextInput type='text' placeholder='Adresse@mail.com' />
       <Button text='Valider' />
 
-      <div className='divTextNoteApplication'>
+      {/* <div className='divTextNoteApplication'>
         <p className='textNoteApplication'>
           Noter notre application :
         </p>
-      </div>
+      </div> */}
 
     </div>
   )
 }
 export default Result
-
-/* function texteScore () {
-  return (
-
-  )
-}
-export {texteScore}
-
-function Score () {
-  return (
-
-  )
-}
-export {Score}
-
-function Classement () {
-  return (
-
-  )
-}
-export {Classement}
-
-function TextClassement () {
-  return (
-
-  )
-}
-export {TextClassement}
-<Podium />
-function Textfelecitations () {
-  return (
-
-  )
-}
-export{Textfelecitations}
-*/

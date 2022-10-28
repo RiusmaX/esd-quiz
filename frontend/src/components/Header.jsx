@@ -5,10 +5,10 @@ function Header (props) {
     <div>
       <div className={`leheader ${!props.name ? 'center' : null}`}>
         <div className='divlogo'>
-          <img className='logo' src='/CROSS_Logo_esdESP_White.png' alt='image' />
+          <img className='logo' src='/CROSS_Logo_esdESP_White.png' alt='logo-esp' />
         </div>
         <div className='divlogo'>
-          <img className='nextGen' src='/Nantes_BNG_white.png' alt='image' />
+          <img className='nextGen' src='/Nantes_BNG_white.png' alt='logo-new-gen' />
         </div>
       </div>
 
