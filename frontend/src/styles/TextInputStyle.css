@@ -7,6 +7,7 @@ label {
   margin: .4rem 0;
 }
 input { 
+  display: flex;
   font-size: 25px;
   line-height: 1.5em;
   padding-block: 10px;
