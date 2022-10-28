@@ -14,7 +14,7 @@ function Result () {
   const [email, setEmail] = useState('')
 
   const [classement, setClassement] = useState([])
-  const { width, height } = useWindowSize()
+  const { width } = useWindowSize()
 
   useEffect(() => {
     const player = JSON.parse(window.localStorage.getItem('PLAYER'))
