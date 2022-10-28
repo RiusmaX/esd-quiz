@@ -1,6 +1,14 @@
+p.connexiontext {
+  color:var(--white);
+  font-style: normal;
+  font-size: 40px;
+  line-height: 36px;
+  text-align: center;
+}
+
 div.blockyellow {
   background-color: var(--secondary);
-  margin-inline : 65px;
+  /* margin-inline : 65px; */
   padding-block: 10px;
 }
 

@@ -1,15 +1,8 @@
 div.topleft {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-p.connexiontext {
-  color:var(--white);
-  font-style: normal;
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 36px;
-  text-align: center;
 }
 
 div.sizecode {

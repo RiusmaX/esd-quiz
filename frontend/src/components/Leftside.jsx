@@ -14,10 +14,6 @@ function Leftside (props) {
         />
       </div>
 
-      <p className='connexiontext'>
-        Lien pour se connecter :
-      </p>
-
     </div>
   )
 }

@@ -1,8 +1,8 @@
 button.btn {
   cursor: pointer;
   background: var(--primary);
-  padding-block: 5px;
-  padding-inline: 15px;
+  padding-block: 10px;
+  padding-inline: 25px;
   color: var(--white);
   font-style: normal;
   font-weight: 700;

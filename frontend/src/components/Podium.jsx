@@ -2,7 +2,7 @@ import '../styles/PodiumStyle.css'
 
 function Podium (props) {
   return (
-    <div className='container'>
+    <div id='podium' className='container'>
       <div className='classement'>
         <div className='podium'>
           <div className='card'>

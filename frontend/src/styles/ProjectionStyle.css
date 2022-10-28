@@ -1,48 +1,60 @@
-  div.row {
-  display:flex;
-  flex-direction:row;
+div.container {
+  background-color: var(--background);
+}
+
+div.row {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   color: var(--white);
   margin-block: 20px;
-  }
-  div.centerside {
-    max-width: 2px;
-    height:60vh;
-    background: var(--primary);
-    flex :1;
-    margin-inline: 40px;
-  }
-  div.question-project{
-    /* width: 60vh; */
-    text-align: center;
-  }
-  div.border{
-    border-bottom: 1px solid var(--primary);
-    align-items: flex-start;
-    width: 25%;
-    margin-inline: auto;
-  }
-  div.col{
-    display: flex;
-    flex-direction: column;
-  }
-  h4.classement{
-    font-size: 40px;
-    margin-bottom: 0;
-  }
+}
 
-    div.row p {
-      font-size: 1.3em;
-    }
-    
-    div.leftside {
-      flex : 6;
-      align-items: center;
-      justify-content: center;
-    }
+div.centerside {
+  max-width: 2px;
+  margin-block: 5%;
+  /* height: 60vh; */
+  background: var(--primary);
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 40px;
+}
 
-    div.rightside {
-      flex :6;
-      align-items: center;
-      justify-content: center;
-    }
+div.question-project {
+  /* width: 60vh; */
+  text-align: center;
+}
+
+div.border {
+  border-bottom: 1px solid var(--primary);
+  align-items: flex-start;
+  width: 25%;
+  margin-inline: auto;
+}
+
+div.col {
+  display: flex;
+  flex-direction: column;
+}
+
+h4.classement {
+  font-size: 40px;
+  margin-bottom: 0;
+}
+
+div.row p {
+  font-size: 35px;
+}
+
+div.leftside {
+  flex: 6;
+  align-items: center;
+  justify-content: center;
+}
+
+div.rightside {
+  flex: 6;
+  align-items: center;
+  justify-content: center;
+}

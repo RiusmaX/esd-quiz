@@ -1,52 +1,61 @@
-div.podium{
-  display:flex;
+#podium div.podium {
+  display: flex;
   justify-content: center;
   align-items: flex-end;
   color: var(--black);
   column-gap: 5px;
   padding-block: 10px;
-  }  
+}
 
-  div.card {
-    width: 30vh;
+#podium div.card {
+  width: 30%;
+}
+
+#podium div.card h4 {
+  color: var(--white);
+  font-size: 20px;
+}
+
+#podium div.col {
+  margin-top: 30px;
+  justify-content: flex-end;
+}
+
+#podium div.col1 {
+  background: var(--secondary);
+  height: 140px;
+}
+
+#podium div.col2 {
+  background: var(--secondary);
+  height: 250px;
+
+}
+
+#podium div.col3 {
+  background: var(--secondary);
+  height: 100px;
+
+}
+
+#podium div.podium p {
+  margin: 0;
+  font-size: 30px;
+  bottom: 0;
+  background-color: var(--white);
+}
+
+@media only screen and (max-width: 600px) {
+  #podium div.col {
+    background: var(--primary);
   }
-  
-  div.card h4{
-    color: var(--white);
-    font-size: 2em;
-    }
-  
-    div.col{
-      margin-top: 30px;
-    }
-    div.col1{
-      background:var(--secondary);
-      height: 140px;
-    }
-    div.col2{
-      background:var(--secondary);
-      height: 250px;
-  
-    }
-    div.col3{
-      background:var(--secondary);
-      height: 100px;
-  
-    }
-    div.podium p {
-      margin: 0;
-      font-size: 2,5em;
-    }
 
-    @media only screen and (max-width: 600px) {
-      div.col {
-        background:var(--primary);
-      }
-      div.podium {
-        padding-inline: 10px;
-      }
-    div.podium p{
-      font-size: 1,5em;
-    }
-    }
-  
+  #podium div.podium {
+    padding-inline: 10px;
+  }
+
+  #podium div.podium p {
+    font-size: 20px;
+    bottom: 0;
+  }
+}

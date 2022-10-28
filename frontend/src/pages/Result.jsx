@@ -1,10 +1,11 @@
 import Confetti from 'react-confetti'
 import useWindowSize from 'react-use/lib/useWindowSize'
 
-import '../styles/ResultStyle.css'
 import Podium from '../components/Podium'
 import TextInput from '../components/TextInput'
 import Button from '../components/Button'
+
+import '../styles/ResultStyle.css'
 
 function Result () {
   const { width, height } = useWindowSize()
@@ -15,9 +16,9 @@ function Result () {
         width={width}
         height={height}
       />
-      <p className='blocResult'>
+      <h1 className='blocResult'>
         Resultats
-      </p>
+      </h1>
       <div className='blocDivScore'>
         <div className='divScore'>
           <p className='score'>
@@ -28,7 +29,7 @@ function Result () {
 
       <div className='divTextClassement'>
         <p className='textClassement'>
-          Vous avez obtenu X sur 15 !
+          Vous avez obtenu <strong>X</strong> points !
         </p>
       </div>
 
@@ -40,25 +41,25 @@ function Result () {
         </div>
       </div>
 
-      <div className='divTextGagnant'>
+      {/* <div className='divTextGagnant'>
         <p className='textGagnant'>
           Et nos gagnants sont ....
         </p>
-      </div>
+      </div> */}
 
       <Podium />
 
       <div className='blocDivFelicitation'>
         <div className='divFelicitation'>
           <p className='Felicitation'>
-            Félicitations à tous !
+            Félicitations !
           </p>
         </div>
       </div>
 
       <div className='divTextReponse'>
         <p className='textReponse'>
-          Retrouver vos résultats et toutes les réponses :
+          Pour plus d'informations :
         </p>
       </div>
 
