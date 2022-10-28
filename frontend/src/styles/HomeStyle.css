@@ -2,12 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-inline: 20px;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* height: 100%; */
 }
 
 .home h1 {
   color: var(--white);
-  margin-block: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 24px;
 }
 
 .home p {
@@ -16,6 +21,7 @@
   color: var(--white);
   font-size: 24px;
   text-align: center;
-  padding-block: 30px;
-  line-height: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  line-height: 1.2em;
 }

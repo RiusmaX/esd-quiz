@@ -8,15 +8,21 @@ import TextQuestion from '../components/TextQuestion'
 import Podium from '../components/Podium'
 import Button from '../components/Button'
 import ProgressBar from '../components/ProgressBar'
-import { getQuestions, getPlayers } from '../services/Api'
+import { getQuestions, getPlayers, getClassement } from '../services/Api'
 
 function Projection () {
   const [questions, setQuestions] = useState([])
+  const [classement, setClassement] = useState([])
   const [players, setPlayers] = useState(0)
 
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
+    const _getClassement = async () => {
+      const result = await getClassement()
+      setClassement(result.data)
+    }
+    _getClassement()
     const _getQuestions = async () => {
       const _questions = await getQuestions()
       if (_questions && _questions.data) {
@@ -83,7 +89,7 @@ function Projection () {
           </div>
           <h4 className='classement'>Classement</h4>
           <div className='border'> </div>
-          <Podium />
+          <Podium classement={classement} />
 
         </div>
       </div>

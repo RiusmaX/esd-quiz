@@ -2,7 +2,8 @@ div.progress-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-block: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .step {

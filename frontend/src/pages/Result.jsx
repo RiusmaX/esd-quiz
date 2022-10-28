@@ -6,19 +6,55 @@ import TextInput from '../components/TextInput'
 import Button from '../components/Button'
 
 import '../styles/ResultStyle.css'
+import { useEffect, useState } from 'react'
+import { getResults, getClassement, updatePlayer } from '../services/Api'
 
 function Result () {
+  const [total, setTotal] = useState(0)
+  const [email, setEmail] = useState('')
+
+  const [classement, setClassement] = useState([])
   const { width, height } = useWindowSize()
+
+  useEffect(() => {
+    const player = JSON.parse(window.localStorage.getItem('PLAYER'))
+    const _getClassement = async () => {
+      const result = await getClassement()
+      setClassement(result.data)
+    }
+    _getClassement()
+    const getData = async () => {
+      const result = await getResults(player.id)
+      setTotal(result?.attributes?.total)
+      console.log(result)
+    }
+    getData()
+  }, [])
+
+  const handleClickEmail = async () => {
+    const player = JSON.parse(window.localStorage.getItem('PLAYER'))
+
+    await updatePlayer(player.id, email)
+  }
 
   return (
     <div className='Resultcontainer'>
       <Confetti
         width={width}
-        height={height}
+        height={1110}
       />
       <h1 className='blocResult'>
         Resultats
       </h1>
+
+      <div className='blocDivFelicitation'>
+        <div className='divFelicitation'>
+          <p className='Felicitation'>
+            Félicitations !
+          </p>
+        </div>
+      </div>
+
       <div className='blocDivScore'>
         <div className='divScore'>
           <p className='score'>
@@ -29,7 +65,7 @@ function Result () {
 
       <div className='divTextClassement'>
         <p className='textClassement'>
-          Vous avez obtenu <strong>X</strong> points !
+          Vous avez obtenu <strong>{total}</strong> points !
         </p>
       </div>
 
@@ -46,15 +82,8 @@ function Result () {
           Et nos gagnants sont ....
         </p>
       </div> */}
-
-      <Podium />
-
-      <div className='blocDivFelicitation'>
-        <div className='divFelicitation'>
-          <p className='Felicitation'>
-            Félicitations !
-          </p>
-        </div>
+      <div className='podium'>
+        <Podium classement={classement} />
       </div>
 
       <div className='divTextReponse'>
@@ -63,8 +92,14 @@ function Result () {
         </p>
       </div>
 
-      <TextInput type='text' placeholder='Adresse@mail.com' />
-      <Button text='Valider' />
+      <TextInput
+        type='email'
+        placeholder='Adresse@mail.com'
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <div className='separatorEmpty' />
+      <Button text='Valider' onClick={handleClickEmail} />
 
       {/* <div className='divTextNoteApplication'>
         <p className='textNoteApplication'>

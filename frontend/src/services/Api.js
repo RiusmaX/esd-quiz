@@ -26,6 +26,24 @@ const getPlayers = async () => {
   }
 }
 
+const getResults = async (playerId) => {
+  try {
+    const result = await api.get(`/results?populate=*&filters[player][id][$eq]=${playerId}`)
+    return result.data.data[0]
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+const getClassement = async (playerId) => {
+  try {
+    const result = await api.get('/results?sort=total:desc&populate=player&pagination[pageSize]=3')
+    return result.data
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 const getWords = async () => {
   try {
     const result = await api.get('/words?pagination[limit]=200')
@@ -78,6 +96,20 @@ const createPlayer = async (name) => {
   }
 }
 
+const updatePlayer = async (playerId, email) => {
+  const data = {
+    data: {
+      email
+    }
+  }
+  try {
+    const result = await api.put(`/players/${playerId}`, data)
+    return result.data
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 const setResult = async (answeredQuestions, total) => {
   const player = JSON.parse(window.localStorage.getItem('PLAYER'))
   const playerResult = JSON.parse(window.localStorage.getItem('RESULT'))
@@ -103,6 +135,9 @@ export {
   getQuestions,
   getPlayers,
   getWords,
+  getResults,
+  getClassement,
   setResult,
+  updatePlayer,
   createWord
 }

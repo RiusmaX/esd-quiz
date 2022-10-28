@@ -2,8 +2,7 @@ div.questiontxt {
   color: var(--white);
   font-style: normal;
   font-weight: 500;
-  font-size: 30px;
-  line-height: 42px;
+  /* font-size: 26px; */
+  line-height: 1.1em;
   justify-content: center;
-  padding-inline: 10px;
 }

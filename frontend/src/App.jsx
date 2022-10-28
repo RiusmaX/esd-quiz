@@ -16,8 +16,8 @@ function App () {
         <Route path='/' index element={<Home />} />
         <Route path='/quiz' element={<Quiz />} />
         <Route path='/projection' element={<Projection />} />
-        <Route path='/result' element={<Result />} />
-        <Route path='/insertmot' element={<Insertmot />} />
+        <Route path='/resultat' element={<Result />} />
+        <Route path='/mot' element={<Insertmot />} />
         <Route path='/nuagedemots' element={<Nuagedemots />} />
       </Routes>
     </div>

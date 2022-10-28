@@ -51,13 +51,16 @@ function Quiz () {
         setIndex(index + 1)
       }
     }
-  }
-
-  const handlePrevious = () => {
-    if (index > 0) {
-      setIndex(index - 1)
+    if (index >= questions.length - 1) {
+      navigate('/mot')
     }
   }
+
+  // const handlePrevious = () => {
+  //   if (index > 0) {
+  //     setIndex(index - 1)
+  //   }
+  // }
 
   const handleSelectAnswer = (answer) => {
     setSelectedAnswer(answer)
@@ -88,7 +91,7 @@ function Quiz () {
                     )
                   : null
               }
-              <Button onClick={handlePrevious} text='<' />
+              {/* <Button onClick={handlePrevious} text='<' /> */}
               <Button disabled={!selectedAnswer} onClick={handleNext} text='Valider' />
             </div>
             )

@@ -1,8 +1,10 @@
 button.btn {
   cursor: pointer;
   background: var(--primary);
-  padding-block: 10px;
-  padding-inline: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
   color: var(--white);
   font-style: normal;
   font-weight: 700;
@@ -13,6 +15,7 @@ button.btn {
   box-shadow: var(--box-shadow-button);
   text-transform: uppercase;
   transition: 0.3s;
+  /* bottom: 0; */
 }
 
 button.btn-disabled {

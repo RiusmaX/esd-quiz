@@ -3,8 +3,10 @@
   justify-content: center;
   align-items: flex-end;
   color: var(--black);
+  width: 30vw;
   column-gap: 5px;
-  padding-block: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #podium div.card {
@@ -13,7 +15,8 @@
 
 #podium div.card h4 {
   color: var(--white);
-  font-size: 20px;
+  font-size: 18px;
+  /* word-break: break-all; */
 }
 
 #podium div.col {
@@ -51,7 +54,9 @@
   }
 
   #podium div.podium {
-    padding-inline: 10px;
+    width: 100vw;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   #podium div.podium p {

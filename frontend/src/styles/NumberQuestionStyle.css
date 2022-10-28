@@ -4,9 +4,9 @@ div.numberq {
   color: var(--background);
   background: var(--secondary);
   font-size: 20px;
-  line-height: 29px;
+  line-height: 20px;
   text-align: center;
   text-transform: uppercase;
-  padding-inline: 5px;
-  margin-block: 15px;
+  padding: 5px 5px;
+  margin-bottom: 10px;
 }

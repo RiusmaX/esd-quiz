@@ -3,7 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-block: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .center {
@@ -11,22 +12,12 @@
 }
 
 .logo {
-  width: 250px;
+  width: 20vw;
   height: auto;
 }
 
-.nextGen {
-  width: 104px;
-  margin-left: 20px;
-}
-
-.textebienvenue {
-  color: white;
-  margin-left: 80px;
-}
-
 .traitheader {
-  width: 60%;
+  width: 60vw;
   border-bottom: 2px solid white;
   margin: auto;
 }
@@ -36,17 +27,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-block: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   
   .logo {
-    width: 60vw;
+    width: 80vw;
     height: auto;
-  }
-  
-  .textebienvenue {
-    color: white;
-    margin-left: 10px;
   }
   
   .traitheader {

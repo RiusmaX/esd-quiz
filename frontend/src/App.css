@@ -1,9 +1,10 @@
 @import url(./styles/variables.css);
 
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  background: var(--background);
-  height: 100vh;
+  /* height: 80vh; */
   overflow: hidden;
   /* width: 100vw; */
 }
