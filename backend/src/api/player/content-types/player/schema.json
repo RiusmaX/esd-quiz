@@ -29,6 +29,12 @@
       "relation": "oneToOne",
       "target": "api::result.result",
       "inversedBy": "player"
+    },
+    "word": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::word.word",
+      "inversedBy": "player"
     }
   }
 }
