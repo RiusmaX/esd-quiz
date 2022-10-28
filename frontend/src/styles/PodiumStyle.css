@@ -8,11 +8,12 @@ div.podium{
   }  
 
   div.card {
-    width: 150px;
+    width: 30vh;
   }
   
   div.card h4{
     color: var(--white);
+    font-size: 2em;
     }
   
     div.col{
@@ -20,20 +21,32 @@ div.podium{
     }
     div.col1{
       background:var(--secondary);
-      height: 35px;
+      height: 140px;
     }
     div.col2{
       background:var(--secondary);
-      height: 50px;
+      height: 250px;
   
     }
     div.col3{
       background:var(--secondary);
-      height: 25px;
+      height: 100px;
   
     }
-    div.row p {
+    div.podium p {
       margin: 0;
-      font-size: 1.3em;
+      font-size: 2,5em;
     }
-    
+
+    @media only screen and (max-width: 600px) {
+      div.col {
+        background:var(--primary);
+      }
+      div.podium {
+        padding-inline: 10px;
+      }
+    div.podium p{
+      font-size: 1,5em;
+    }
+    }
+  
