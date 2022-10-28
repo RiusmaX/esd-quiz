@@ -88,6 +88,7 @@ function Projection () {
             <Button onClick={handlePrevious} text='<' />
             <Button onClick={handleNext} text='>' />
           </div>
+          <a target='_blank' className='cloudLink' href='/nuagedemots'>Voir le nuage de mots</a>
           <h4 className='classement'>Classement</h4>
           <div className='border'> </div>
           <Podium classement={classement} />
