@@ -3,11 +3,14 @@
   flex-direction:row;
   justify-content: space-between;
   color: var(--white);
+  margin-block: 20px;
   }
   div.centerside {
-    width: 2px;
+    max-width: 2px;
     height:60vh;
     background: var(--primary);
+    flex :1;
+    margin-inline: 40px;
   }
   div.question-project{
     /* width: 60vh; */
@@ -27,12 +30,19 @@
     font-size: 40px;
     margin-bottom: 0;
   }
-  div.leftside {
-   padding-left: 100px;
-  }
-  div.rightside {
-    padding-right: 100px;
-   }
+
     div.row p {
       font-size: 1.3em;
+    }
+    
+    div.leftside {
+      flex : 6;
+      align-items: center;
+      justify-content: center;
+    }
+
+    div.rightside {
+      flex :6;
+      align-items: center;
+      justify-content: center;
     }
