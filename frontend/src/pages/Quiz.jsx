@@ -6,6 +6,7 @@ import NumberQuestion from '../components/NumberQuestion'
 import ProgressBar from '../components/ProgressBar'
 import TextQuestion from '../components/TextQuestion'
 import { getQuestions, setResult } from '../services/Api'
+import Loader from '../components/Loader'
 
 import '../styles/QuizStyle.css'
 
@@ -13,7 +14,7 @@ function Quiz () {
   const [questions, setQuestions] = useState([])
   const [index, setIndex] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState()
-  const [answeredQuestions, setAnsweredQuestions ] = useState([])
+  const [answeredQuestions, setAnsweredQuestions] = useState([])
   const [total, setTotal] = useState(0)
   const navigate = useNavigate()
 
@@ -76,13 +77,13 @@ function Quiz () {
                   ? (
                       questions[index].attributes.answers.map(answer => {
                         return (
-                          <Answer 
-                            key={answer.id} 
-                            onClick={handleSelectAnswer} 
+                          <Answer
+                            key={answer.id}
+                            onClick={handleSelectAnswer}
                             answer={answer}
-                            selected={selectedAnswer && selectedAnswer.id === answer.id ? true : false}
+                            selected={!!(selectedAnswer && selectedAnswer.id === answer.id)}
                           />
-                      )
+                        )
                       })
                     )
                   : null
@@ -91,7 +92,7 @@ function Quiz () {
               <Button disabled={!selectedAnswer} onClick={handleNext} text='Valider' />
             </div>
             )
-          : <h2>Chargement...</h2>
+          : <Loader />
         }
     </>
   )

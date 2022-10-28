@@ -29,7 +29,7 @@ function Home () {
     <div className='home'>
       <h1>
         Bienvenue sur le quiz
-        de l’inauguration
+        d'inauguration
         de l’ESP-ESD
       </h1>
       <TextInput
@@ -41,7 +41,7 @@ function Home () {
       <p>
         Vous allez participer à un quiz interactif.
         <span>
-          Pour chaque question, un indice musical sera diffusé dans la salle 🎶.
+          Pour chaque question, un indice musical sera diffusé dans la salle 📣.
         </span>
         <span>
           Ouvrez bien vos oreilles...

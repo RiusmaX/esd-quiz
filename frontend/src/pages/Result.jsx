@@ -9,7 +9,7 @@ function Result () {
     <div className='Resultcontainer'>
       {/* <Header /> */}
       <p className='blocResult'>
-        Resultat
+        Resultats
       </p>
       <div className='blocDivScore'>
         <div className='divScore'>
@@ -51,7 +51,7 @@ function Result () {
 
       <div className='divTextReponse'>
         <p className='textReponse'>
-          Récupérez votre résultat et toutes les réponses :
+          Retrouver vos résultats et toutes les réponses :
         </p>
       </div>
 
