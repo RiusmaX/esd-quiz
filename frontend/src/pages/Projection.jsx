@@ -63,7 +63,7 @@ function Projection () {
 
         </div>
 
-        {/* <div className='col centerside'> </div> */}
+        <div className='col centerside'> </div>
 
         <div className='col rightside'>
 
