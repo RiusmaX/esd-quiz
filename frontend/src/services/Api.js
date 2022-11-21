@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'https://strapi.esd-quiz.sergent.tech/api',
+  baseURL: 'https://strapi.espub-quiz.fr/api',
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json'

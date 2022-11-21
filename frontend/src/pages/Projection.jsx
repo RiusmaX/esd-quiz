@@ -70,7 +70,7 @@ function Projection () {
         <div className='col leftside'>
           <div className='question-project'>
             <Leftside />
-            <Lienconnexion lien='https://esd-quiz.sergent.tech/' />
+            <Lienconnexion lien='https://espub-quiz.fr/' />
             <Nbrparticipant players={players} />
           </div>
 
